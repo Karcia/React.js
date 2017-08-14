@@ -1,21 +1,40 @@
 import React, { Component } from 'react';
+import {render} from 'react-dom';
+import KanbanBoard from './KanbanBoard';
 import logo from './logo.svg';
 import './App.css';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
-}
+let cardsList = [
+  {
+    id: 1,
+    title: "Read book",
+    description: "i need to read whole book",
+    status: "in-progress",
+    tasks: []
+  },
+  {
+    id: 2,
+    title: "write some code",
+    description: "its your imagination",
+    status: "to-do",
+    tasks: [
+      {
+        id: 1,
+        name: "sample of contact list",
+        done: true
+      },
+      {
+        id: 2,
+        name: "kanban sample",
+        done: false
+      },
+      {
+        id: 3,
+        name: "my exp",
+        done: false
+      }
+    ]
+  }, 
+];
 
-export default App;
+React.render(<KanbanBoard cards={cardsList} />, document.getElementById('root'));

@@ -15,22 +15,22 @@ let cardsList = [
   {
     id: 2,
     title: "write some code",
-    description: "description",
+    description: "which will be work",
     status: "todo",
     tasks: [
       {
         id: 1,
-        name: "name",
+        name: "jeden",
         done: true
       },
       {
         id: 2,
-        name: "name",
+        name: "dwa",
         done: false
       },
       {
         id: 3,
-        name: "name",
+        name: "trzy",
         done: false
       }
     ]

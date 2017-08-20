@@ -4,11 +4,11 @@ import List from './List';
 class KanbanBoard extends Component {
   render() {
     return (
-      <div className="app">
+      <div className="KanbanBoard">
         <List id='todo' title="To do" cards={
           this.props.cards.filter((card) => card.status === "todo")
         } />
-        <List id='in-progress' title="In In progress" cards={
+        <List id='in-progress' title="In progress" cards={
           this.props.cards.filter((card) => card.status === "in-progress")
         } />
         <List id='done' title="Done" cards={
